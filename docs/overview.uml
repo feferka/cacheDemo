@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/pavol/Work/github/cacheDemo/src/main/java</OriginalElement>
+  <nodes>
+    <node x="-14.5" y="-131.5">com.teliacompany.cachedemo.CacheDemoApplication</node>
+    <node x="641.0" y="404.0">com.teliacompany.cachedemo.service.DtoCachedWrapper</node>
+    <node x="-14.5" y="80.0">com.teliacompany.cachedemo.repository.DtoRepository</node>
+    <node x="325.0" y="448.0">com.teliacompany.cachedemo.service.DtoService</node>
+    <node x="709.5" y="1.5">com.teliacompany.cachedemo.service.DtoCacheSharing</node>
+    <node x="1027.5" y="-10.0">com.teliacompany.cachedemo.configuration.CacheConfiguration</node>
+    <node x="346.5" y="102.0">com.teliacompany.cachedemo.domain.Dto</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.teliacompany.cachedemo.repository.DtoRepository" target="com.teliacompany.cachedemo.domain.Dto" relationship="DEPENDENCY">
+      <point x="154.5" y="0.0" />
+      <point x="-113.5" y="0.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoCachedWrapper" target="com.teliacompany.cachedemo.service.DtoCacheSharing" relationship="TO_ONE">
+      <point x="0.0" y="-116.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoCachedWrapper" target="com.teliacompany.cachedemo.repository.DtoRepository" relationship="TO_ONE">
+      <point x="0.0" y="116.0" />
+      <point x="820.0" y="680.0" />
+      <point x="140.0" y="680.0" />
+      <point x="0.0" y="160.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoService" target="com.teliacompany.cachedemo.domain.Dto" relationship="DEPENDENCY">
+      <point x="0.0" y="-72.0" />
+      <point x="0.0" y="138.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoService" target="com.teliacompany.cachedemo.service.DtoCachedWrapper" relationship="TO_ONE">
+      <point x="135.0" y="0.0" />
+      <point x="-179.0" y="0.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoCachedWrapper" target="com.teliacompany.cachedemo.domain.Dto" relationship="DEPENDENCY">
+      <point x="-39.25" y="-116.0" />
+      <point x="780.75" y="240.0" />
+      <point x="113.5" y="0.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.repository.DtoRepository" target="com.teliacompany.cachedemo.domain.Dto" relationship="TO_MANY">
+      <point x="0.0" y="-160.0" />
+      <point x="140.0" y="40.0" />
+      <point x="455.0" y="40.0" />
+      <point x="-5.0" y="-138.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoCachedWrapper" target="com.teliacompany.cachedemo.configuration.CacheConfiguration" relationship="DEPENDENCY">
+      <point x="179.0" y="0.0" />
+      <point x="1160.0" y="520.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoCacheSharing" target="com.teliacompany.cachedemo.domain.Dto" relationship="DEPENDENCY">
+      <point x="-110.5" y="0.0" />
+      <point x="465.0" y="40.0" />
+      <point x="5.0" y="-138.0" />
+    </edge>
+    <edge source="com.teliacompany.cachedemo.service.DtoCacheSharing" target="com.teliacompany.cachedemo.configuration.CacheConfiguration" relationship="DEPENDENCY">
+      <point x="110.5" y="0.0" />
+      <point x="-132.5" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Compact" zoom="1.0" showDependencies="true" x="636.5" y="329.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

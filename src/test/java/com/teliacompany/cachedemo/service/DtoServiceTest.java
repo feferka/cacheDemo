@@ -2,6 +2,7 @@ package com.teliacompany.cachedemo.service;
 
 import com.teliacompany.cachedemo.domain.Dto;
 import com.teliacompany.cachedemo.repository.DtoRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -44,9 +45,16 @@ public class DtoServiceTest {
     private DtoRepository repository;
 
     @BeforeEach
-    private void setup() {
+    private void reset() {
         repository.setRepository(List.of(expectedDto1, expectedDto2));
         cachedWrapper.resetCache();
+        System.out.println("reset");
+    }
+
+    @AfterEach
+    private void done() {
+        System.out.println("done");
+        System.out.println();
     }
 
     private void assertIdFetchCount(String id, int count) {

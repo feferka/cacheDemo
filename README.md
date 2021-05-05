@@ -1,4 +1,4 @@
-# SpringBoot Cache demo which 
+# SpringBoot Cache demo
 
 - it caches the same object by multiple identification parameters (_id, code_ in that demo)
 - it caches objects 

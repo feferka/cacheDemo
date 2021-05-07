@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class DtoCacheSharing {
 
-    @CachePut(cacheNames = CacheConfiguration.CacheDtoById, key = "#dto.id", unless = "#dto == null || #dto.id == null")
+    @CachePut(cacheNames = CacheConfiguration.CacheDtoById, key = "#dto.id", condition = "#dto != null && #dto.id != null")
     public Dto putIntoIdCache(@NonNull Dto dto) {
         return dto;
     }
 
-    @CachePut(cacheNames = CacheConfiguration.CacheDtoByCode, key = "#dto.code", unless = "#dto == null || #dto.code == null")
+    @CachePut(cacheNames = CacheConfiguration.CacheDtoByCode, key = "#dto.code", condition = "#dto != null && #dto.code != null")
     public Dto putIntoCodeCache(@NonNull Dto dto) {
         return dto;
     }
